@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+</head>
+<body>
+    <h1>INFORMATION</h1>
+    <hr style="border: 0; height: 5px; background-color: rgba(40, 43, 198, 0.717);">
+
+    <label for="myCheck">Checkbox:</label>
+    <input type="checkbox" id="myCheck">
+    <p id="message" hidden>Checkbox is checked!</p>
+
+    <p>
+        <label for="textbox1">Textbox 1:</label>
+        <input type="text" id="textbox1">
+    </p>
+
+    <p>
+        <label for="textbox2">Textbox 2:</label>
+        <input type="text" id="textbox2">
+    </p>
+
+    <p>
+        <label for="textbox3">Textbox 3:</label>
+        <input type="text" id="textbox3">
+    </p>
+
+    <script>
+        const checkbox = document.getElementById("myCheck");
+        const message = document.getElementById("message");
+
+        checkbox.addEventListener("change", function () {
+            message.hidden = !checkbox.checked;
+        });
+    </script>
+</body>
+</html>
